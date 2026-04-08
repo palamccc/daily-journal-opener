@@ -1,14 +1,28 @@
 {
   "name": "daily-journal-opener",
-  "displayName": "daily-journal-opener",
-  "description": "Shortcut to open daily journal file",
+  "displayName": "Daily Journal Opener",
+  "description": "Open or create today's journal note in a YYYY-MM/YYYY-MM-DD.md structure.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.115.0"
   },
   "categories": [
-    "Other"
+    "Productivity"
   ],
+  "keywords": [
+    "journal",
+    "daily-notes",
+    "markdown",
+    "productivity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palamccc/daily-journal-opener.git"
+  },
+  "homepage": "https://github.com/palamccc/daily-journal-opener#readme",
+  "bugs": {
+    "url": "https://github.com/palamccc/daily-journal-opener/issues"
+  },
   "activationEvents": [
     "onCommand:daily-journal-opener.openToday"
   ],
@@ -17,7 +31,7 @@
     "commands": [
       {
         "command": "daily-journal-opener.openToday",
-        "title": "Open Today's Journal"
+        "title": "Daily Journal: Open Today's Note"
       }
     ],
     "keybindings": [
