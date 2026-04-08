@@ -9,13 +9,22 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:daily-journal-opener.openToday"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "daily-journal-opener.helloWorld",
-        "title": "Hello World"
+        "command": "daily-journal-opener.openToday",
+        "title": "Open Today's Journal"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "daily-journal-opener.openToday",
+        "key": "ctrl+f9",
+        "mac": "cmd+f9"
       }
     ]
   },
