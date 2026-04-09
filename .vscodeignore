@@ -4,6 +4,7 @@ src/**
 .gitignore
 .yarnrc
 vsc-extension-quickstart.md
+pnpm-lock.yaml
 **/tsconfig.json
 **/eslint.config.mjs
 **/*.map
