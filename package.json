@@ -4,7 +4,7 @@
   "displayName": "Daily Journal Opener",
   "description": "Open or create today's journal note in a YYYY-MM/YYYY-MM-DD.md structure.",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.115.0"
   },
@@ -47,7 +47,7 @@
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "build-vsix": "npx @vscode/vsce package",
+    "build-vsix": "npx @vscode/vsce package --no-dependencies",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src",

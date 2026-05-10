@@ -15,8 +15,13 @@ export function activate(context: vscode.ExtensionContext) {
 		const dd = String(now.getDate()).padStart(2, '0');
 		const dir = join(folder.uri.fsPath, 'journal', `${yyyy}-${mm}`);
 		const file = join(dir, `${yyyy}-${mm}-${dd}.md`);
+		const template = `# ${yyyy}-${mm}-${dd}\n\n### Action Items\n\n- [ ] \n`;
 		await mkdir(dir, { recursive: true });
-		await writeFile(file, '', { flag: 'a' });
+		try {
+			await writeFile(file, template, { flag: 'wx' });
+		} catch (err) {
+			if ((err as NodeJS.ErrnoException).code !== 'EEXIST') { throw err; }
+		}
 		const doc = await vscode.workspace.openTextDocument(file);
 		await vscode.window.showTextDocument(doc);
 	}));
