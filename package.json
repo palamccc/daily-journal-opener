@@ -25,9 +25,6 @@
   "bugs": {
     "url": "https://github.com/palamccc/daily-journal-opener/issues"
   },
-  "activationEvents": [
-    "onCommand:daily-journal-opener.openToday"
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
